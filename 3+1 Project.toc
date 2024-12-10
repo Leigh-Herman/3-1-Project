@@ -146,3 +146,21 @@
 \contentsline {paragraph}{Implementation Workflow}{34}{section*.93}%
 \contentsline {paragraph}{Results}{34}{section*.94}%
 \contentsline {paragraph}{Conclusion}{35}{section*.95}%
+\contentsline {section}{\numberline {8}Simulation of Black Hole Interaction}{35}{section.8}%
+\contentsline {paragraph}{Overview}{35}{section*.96}%
+\contentsline {paragraph}{Objectives}{35}{section*.97}%
+\contentsline {paragraph}{Methodology}{35}{section*.98}%
+\contentsline {paragraph}{Expected Outcomes}{36}{section*.99}%
+\contentsline {subsection}{\numberline {8.1}Interpretation of the Hamiltonian Constraint Visualization}{36}{subsection.8.1}%
+\contentsline {paragraph}{Overview}{36}{section*.100}%
+\contentsline {paragraph}{Hamiltonian Constraint}{36}{section*.101}%
+\contentsline {paragraph}{Visualization Details}{36}{section*.102}%
+\contentsline {paragraph}{Physical Interpretation}{37}{section*.103}%
+\contentsline {paragraph}{Expected Trends}{37}{section*.104}%
+\contentsline {paragraph}{Suggestions for Analysis}{37}{section*.105}%
+\contentsline {paragraph}{Conclusion}{38}{section*.106}%
+\contentsline {subsection}{\numberline {8.2}Plunging Black Hole Simulation}{38}{subsection.8.2}%
+\contentsline {paragraph}{Overview}{38}{section*.107}%
+\contentsline {paragraph}{Methodology}{38}{section*.108}%
+\contentsline {paragraph}{Visualization}{38}{section*.109}%
+\contentsline {paragraph}{Conclusion}{38}{section*.110}%

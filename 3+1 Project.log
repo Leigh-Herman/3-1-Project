@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.11.7)  6 DEC 2024 13:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.11.7)  6 DEC 2024 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -359,13 +359,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `"3+1 Project.toc"'.
 
  [2{C:/Users/herma/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-su
-per-ts1.enc}] [3]
+per-ts1.enc}] [3] [4]
 Overfull \hbox (1.78943pt too wide) in paragraph at lines 134--134
 []\OT1/cmr/bx/n/14.4 Metric in Painlev^^Se-Gullstrand Co-or-di-nates with Per-t
 ur-ba-tions 
  []
 
-[4] [5]
+[5]
 Overfull \hbox (13.02075pt too wide) in paragraph at lines 201--201
 []\OT1/cmr/bx/n/17.28 3+1 Equa-tions with Per-tur-ba-tions in Har-monic Gauge 
  []
@@ -378,19 +378,20 @@ ML/cmm/m/it/12 H\OMS/cmsy/m/n/12 j$ \OT1/cmr/m/n/12 is mon-i-tored in par-al-le
 l at each timestep. 
  []
 
-[29] [30] [31] [32] [33] [34] (3+1 Project.bbl) [35] (3+1 Project.aux)
+[29] [30] [31] [32] [33] [34] [35] [36] [37] (3+1 Project.bbl [38]) [39]
+(3+1 Project.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
 Package rerunfilecheck Info: File `"3+1 Project".out' has not changed.
-(rerunfilecheck)             Checksum: 8DACBC84E6DECEDA0EE33B8AD7338ADA;12485.
+(rerunfilecheck)             Checksum: DC02D6239D843D37B1277F0A1B53BF32;13301.
  ) 
 Here is how much of TeX's memory you used:
- 9583 strings out of 474592
- 146375 string characters out of 5745799
+ 9608 strings out of 474592
+ 146660 string characters out of 5745799
  1940533 words of memory out of 5000000
- 31425 multiletter control sequences out of 15000+600000
+ 31428 multiletter control sequences out of 15000+600000
  567685 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,16n,79p,459b,656s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -409,9 +410,9 @@ erma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
 /cm/cmti12.pfb><C:/Users/herma/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmtt12.pfb><C:/Users/herma/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/cm-super/sfrm1200.pfb>
-Output written on "3+1 Project.pdf" (35 pages, 316635 bytes).
+Output written on "3+1 Project.pdf" (39 pages, 329115 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 246 named destinations out of 1000 (max. 500000)
- 433 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 751 PDF objects out of 1000 (max. 8388607)
+ 268 named destinations out of 1000 (max. 500000)
+ 457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

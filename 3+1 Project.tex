@@ -1521,6 +1521,154 @@ The implementation follows these steps:
 \paragraph{Conclusion}
 This unified implementation integrates all the features developed into a cohesive simulation framework. It enables detailed analysis, testing, and visualization of complex dynamical systems in numerical relativity.
 
+\section{Simulation of Black Hole Interaction}
+
+\paragraph{Overview}
+This phase of the project involves simulating the interaction between a large and small black hole within the previously constructed numerical framework. The goal is to study the dynamic evolution of the spacetime and visualize key physical phenomena, such as the emission of gravitational waves and metric deformation.
+
+\paragraph{Objectives}
+\begin{itemize}
+    \item Simulate the interaction between a large and small black hole.
+    \item Implement dynamic evolution of spacetime metric and extrinsic curvature.
+    \item Incorporate the effects of gravitational perturbations caused by the smaller black hole.
+    \item Visualize the trajectories of the black holes and gravitational waves emitted during the interaction.
+\end{itemize}
+
+\paragraph{Methodology}
+\begin{itemize}
+    \item \textbf{Initial Conditions:}
+    \begin{itemize}
+        \item Superimpose the metric of the larger black hole with a perturbation caused by the smaller black hole.
+        \item Use Painlevé-Gullstrand coordinates for the large black hole's metric.
+        \item Initialize the smaller black hole as a perturbation moving radially inward or orbitally.
+    \end{itemize}
+    \item \textbf{Evolution Equations:}
+    \begin{itemize}
+        \item Update the lapse and shift using the 1+log slicing and Gamma-driver conditions.
+        \item Evolve the metric and extrinsic curvature using modified evolution equations with source terms.
+        \item Add source terms to incorporate the effects of the smaller black hole's mass and motion.
+    \end{itemize}
+    \item \textbf{Boundary Conditions:}
+    \begin{itemize}
+        \item Apply outgoing wave boundary conditions for gravitational wave emission.
+        \item Reflective or absorbing conditions for the inner boundary as needed.
+    \end{itemize}
+    \item \textbf{Numerical Techniques:}
+    \begin{itemize}
+        \item Use adaptive mesh refinement (AMR) to focus resolution near the smaller black hole.
+        \item Leverage parallelism to optimize stability monitoring and evolution calculations.
+    \end{itemize}
+    \item \textbf{Visualization:}
+    \begin{itemize}
+        \item Generate 2D and 3D plots of metric deformation and gravitational waves.
+        \item Create animated visualizations of the Hamiltonian constraint and the trajectories of the black holes.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{Expected Outcomes}
+\begin{itemize}
+    \item A numerical simulation of the spacetime interaction between a large and small black hole.
+    \item Visualization of gravitational waves and metric evolution during the interaction.
+    \item Insights into the dynamics of binary black hole systems.
+\end{itemize}
+
+\subsection{Interpretation of the Hamiltonian Constraint Visualization}
+
+\paragraph{Overview}
+The animated GIF produced by the simulation visualizes the evolution of the Hamiltonian constraint over time. This subsection provides an interpretation of the visualization, focusing on its physical meaning, expected trends, and implications for the stability and accuracy of the simulation.
+
+\paragraph{Hamiltonian Constraint}
+\begin{itemize}
+    \item The Hamiltonian constraint is defined as:
+    \[
+    H = \frac{K_{rr}^2}{\gamma_{rr}},
+    \]
+    where:
+    \begin{itemize}
+        \item \( K_{rr} \): Radial extrinsic curvature component.
+        \item \( \gamma_{rr} \): Radial metric component.
+    \end{itemize}
+    \item The constraint measures the deviation of the numerical solution from the Einstein equations. Smaller values of \( H \) indicate a more accurate solution.
+\end{itemize}
+
+\paragraph{Visualization Details}
+\begin{itemize}
+    \item The GIF displays a 2D contour plot of the Hamiltonian constraint at successive time steps.
+    \item Each contour represents the magnitude of \( H \), with:
+    \begin{itemize}
+        \item \textbf{Bright regions:} Larger constraint violations.
+        \item \textbf{Dark regions:} Smaller constraint violations (closer to the exact solution).
+    \end{itemize}
+    \item The evolution of \( H \) reflects changes in the spacetime metric caused by the interaction between the black holes.
+\end{itemize}
+
+\paragraph{Physical Interpretation}
+\begin{itemize}
+    \item The large black hole provides a stable background metric, while the smaller black hole introduces perturbations.
+    \item As the two black holes interact, gravitational waves propagate outward, dynamically altering the Hamiltonian constraint.
+    \item The visualization captures:
+    \begin{itemize}
+        \item Regions of constraint violation near the black holes and wavefronts.
+        \item Dissipation of constraint violations over time, indicating stability.
+        \item Potential growth of bright regions, which may signal numerical instability.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{Expected Trends}
+\begin{itemize}
+    \item \textbf{Early time steps:} Higher constraint violations near the black holes due to initialization effects.
+    \item \textbf{Mid-to-late time steps:} Gradual dissipation of constraints as gravitational waves radiate outward.
+    \item \textbf{Stable behavior:} Constraints reducing over time indicate a well-behaved simulation.
+    \item \textbf{Instabilities:} Persistent or growing bright regions suggest numerical errors, requiring further investigation.
+\end{itemize}
+
+\paragraph{Suggestions for Analysis}
+\begin{itemize}
+    \item Save specific frames of the GIF for detailed analysis of constraint behavior.
+    \item Overlay black hole positions on the plot to correlate dynamics with constraint evolution.
+    \item Extract 1D slices of the Hamiltonian constraint (e.g., along the radial direction) to quantify trends.
+    \item Verify dissipation of constraints in regions far from the black holes to ensure proper boundary conditions.
+\end{itemize}
+
+\paragraph{Conclusion}
+The GIF provides critical insights into the simulation's stability and accuracy by visualizing the Hamiltonian constraint. By analyzing the evolution of \( H \), it is possible to identify and address numerical instabilities while interpreting the physical dynamics of the black hole interaction.
+
+\subsection{Plunging Black Hole Simulation}
+
+\paragraph{Overview}
+This simulation models the interaction of a smaller black hole plunging into a larger black hole. The focus is on the evolution of the Hamiltonian constraint and its behavior as the smaller black hole approaches and ultimately merges with the larger black hole.
+
+\paragraph{Methodology}
+\begin{itemize}
+    \item \textbf{Initial Conditions:}
+    \begin{itemize}
+        \item The large black hole is represented by a Painlevé-Gullstrand metric.
+        \item The smaller black hole is introduced as a perturbation with an initial radial position and velocity.
+    \end{itemize}
+    \item \textbf{Evolution:}
+    \begin{itemize}
+        \item The Hamiltonian constraint is computed and visualized as the smaller black hole approaches the large black hole.
+        \item Perturbations due to the smaller black hole are added dynamically during the evolution.
+        \item The simulation terminates when the smaller black hole reaches the horizon of the larger black hole.
+    \end{itemize}
+    \item \textbf{Boundary Conditions:}
+    \begin{itemize}
+        \item Outgoing wave boundary conditions are applied at the outer boundary to simulate gravitational wave radiation.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{Visualization}
+\begin{itemize}
+    \item The simulation generates a GIF showing the evolution of the Hamiltonian constraint.
+    \item The GIF captures:
+    \begin{itemize}
+        \item The constraint behavior as the smaller black hole approaches the larger one.
+        \item Gravitational wave propagation and dissipation.
+    \end{itemize}
+\end{itemize}
+
+\paragraph{Conclusion}
+This simulation provides insights into the dynamics of binary black hole interactions and the stability of numerical solutions during such events.
 
 
 \bibliographystyle{plain}
