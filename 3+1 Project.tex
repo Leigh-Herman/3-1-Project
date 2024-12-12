@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath, amssymb, hyperref, geometry}
+\usepackage{todonotes}
 \geometry{margin=1in}
 \title{Numerical Relativity: A 3+1 Split Approach}
 \author{DLH}
@@ -76,6 +77,7 @@
 \end{itemize}
 
 \subsection{ADM Formalism and 3+1 Decomposition}
+
 \begin{itemize}
     \item The ADM formalism splits spacetime into space and time, facilitating numerical evolution:
     \begin{itemize}
@@ -90,23 +92,52 @@
         \end{equation}
         where $\alpha$ is the lapse function, $\beta^i$ the shift vector, and $\gamma_{ij}$ the induced spatial metric.
     \end{itemize}
-    \item Key equations:
-    \begin{itemize}
-        \item \textbf{Hamiltonian Constraint:}
-        \begin{equation}
-            R - K_{ij}K^{ij} + K^2 = 0,
-        \end{equation}
-        where $R$ is the Ricci scalar of $\gamma_{ij}$, $K_{ij}$ the extrinsic curvature, and $K$ its trace.
-        \item \textbf{Momentum Constraint:}
-        \begin{equation}
-            \nabla_j (K^{ij} - \gamma^{ij} K) = 0.
-        \end{equation}
-        \item \textbf{Evolution Equations:}
-        \begin{align}
-            \partial_t \gamma_{ij} &= -2\alpha K_{ij} + \nabla_i \beta_j + \nabla_j \beta_i, \\
-            \partial_t K_{ij} &= -\nabla_i \nabla_j \alpha + \alpha (R_{ij} + K K_{ij} - 2K_{il}K^l_j).
-        \end{align}
-    \end{itemize}
+\end{itemize}
+
+\subsubsection{Evolution Equations}
+\begin{itemize}
+    \item The 3+1 decomposition splits the Einstein field equations into evolution and constraint equations. With the perturbed metric:
+    \[
+    g_{\mu\nu} = g_{\mu\nu}^{(0)} + \epsilon h_{\mu\nu},
+    \]
+    the evolution equations for the spatial metric $\gamma_{ij}$ and extrinsic curvature $K_{ij}$ are:
+    \begin{align}
+        \partial_t \gamma_{ij} &= -2\alpha K_{ij} + \nabla_i \beta_j + \nabla_j \beta_i, \\
+        \partial_t K_{ij} &= -\nabla_i \nabla_j \alpha + \alpha (R_{ij} + K K_{ij} - 2K_{ik}K^k_j) + \beta^k \nabla_k K_{ij} + K_{ik} \nabla_j \beta^k + K_{jk} \nabla_i \beta^k.
+    \end{align}
+    Here, $\nabla_i$ is the covariant derivative associated with the spatial metric $\gamma_{ij}$, and $R_{ij}$ is its Ricci tensor.
+    \item Introducing perturbations:
+    \begin{align*}
+        \gamma_{ij} &= \gamma_{ij}^{(0)} + \epsilon h_{ij}, \\
+        K_{ij} &= K_{ij}^{(0)} + \epsilon \delta K_{ij},
+    \end{align*}
+    the evolution equations for the perturbed variables become:
+    \begin{align}
+        \partial_t h_{ij} &= -2 \alpha_0 \delta K_{ij} + \mathcal{L}_\beta h_{ij}, \\
+        \partial_t \delta K_{ij} &= -\nabla_i \nabla_j \delta\alpha + \alpha_0 \left( \delta R_{ij} + K^{(0)} \delta K_{ij} - 2 K_{ik}^{(0)} \delta K^k_j \right),
+    \end{align}
+    where $\mathcal{L}_\beta$ is the Lie derivative along the shift vector $\beta^i$.
+
+\end{itemize}
+
+\subsubsection{Constraint Equations}
+\begin{itemize}
+    \item The Hamiltonian constraint:
+    \[
+    R - K_{ij}K^{ij} + K^2 = 0.
+    \]
+    Expanding in terms of the perturbations, this becomes:
+    \[
+    \delta R - 2 K^{(0)} \delta K + \delta K_{ij} K^{ij} - K_{ij}^{(0)} \delta K^{ij} = 0.
+    \]
+    \item The momentum constraint:
+    \[
+    \nabla_j (K^{ij} - \gamma^{ij} K) = 0,
+    \]
+    leads to:
+    \[
+    \nabla_j (\delta K^{ij} - h^{ij} K^{(0)}) = 0.
+    \]
 \end{itemize}
 
 \subsubsection{Defining Lapse and Shift with Perturbations}
@@ -185,6 +216,58 @@
     \item The perturbed lapse and shift satisfy the Hamiltonian and momentum constraints, ensuring consistency with the Einstein equations.
 \end{itemize}
 
+
+\section{What is a Gauge Choice in Relativity?}
+In general relativity, the Einstein field equations are covariant under coordinate transformations, which introduces \textit{gauge freedom}. A \textit{gauge choice} refers to selecting specific coordinate conditions or auxiliary equations to simplify the computation and achieve stability in numerical simulations. Gauge choices are fundamental in ensuring that the physical interpretation of a simulation aligns with the observer's frame of reference.
+
+For an in-depth discussion on gauge freedom, refer to the foundational works in general relativity \cite{wald1984general,gourgoulhon2012three}.
+
+\subsection{How is a Gauge Choice Implemented?}
+In the context of the \textit{3+1 formalism} \cite{gourgoulhon2012three,alcubierre2008introduction}, the spacetime is decomposed into a three-dimensional spatial hypersurface evolving over time. Gauge choices are implemented through:
+\begin{itemize}
+    \item The \textit{lapse function}, $\alpha$, controlling the rate of proper time progression.
+    \item The \textit{shift vector}, $\beta^i$, determining the coordinate system on the spatial hypersurface.
+\end{itemize}
+
+Specific gauge conditions are applied to reduce the complexity of Einstein's equations and to manage the evolution of the metric components and extrinsic curvature \cite{baumgarte2010numerical,alcubierre2008introduction}. 
+
+\subsection{Different Gauge Options}
+Gauge conditions can be divided into two main categories: slicing conditions and spatial gauge conditions. Below, we explore key options and their applications in numerical relativity.
+
+\subsubsection{Geodesic Slicing}
+Geodesic slicing sets $\alpha = 1$ and $\beta^i = 0$, leading to straightforward coordinate systems. However, this choice often results in the formation of coordinate singularities, such as caustics \cite{smarr1978kinematical}.
+
+\subsection{Harmonic Slicing}
+Harmonic slicing enforces the condition $\Box t = 0$, which helps to maintain a smooth evolution and avoids singularities. This condition is frequently used in conjunction with harmonic coordinates \cite{bona1994gauge}.
+
+\subsubsection{1+log Slicing}
+The 1+log slicing condition is a widely used option for its stability in black hole simulations. It evolves the lapse function as:
+\[
+\partial_t \alpha = -\alpha^2 K,
+\]
+where $K$ is the trace of the extrinsic curvature. This condition has been shown to prevent the collapse of the lapse function and coordinate singularities \cite{alcubierre2000standard}.
+
+\subsubsection{Maximal Slicing}
+Maximal slicing enforces the condition that the trace of the extrinsic curvature, $K$, vanishes at each timestep:
+\[
+K = 0.
+\]
+This choice minimizes the distortion of the spatial hypersurface and effectively delays the development of coordinate singularities. It is particularly useful in simulations of compact objects such as black holes. However, solving the elliptic equation for the lapse function under maximal slicing can be computationally expensive \cite{baumgarte2010numerical}.
+
+\subsubsection{Minimal Distortion Shift}
+The minimal distortion condition minimizes changes in the metric components during evolution. This choice is effective in preserving the geometric properties of the spatial hypersurface \cite{smarr1979structure}.
+
+\subsubsection{Gamma-Driver Shift Condition}
+The Gamma-driver condition dynamically evolves the shift vector $\beta^i$ to reduce distortions in the coordinates:
+\[
+\partial_t \beta^i = B^i, \quad \partial_t B^i = \eta \partial_t \Gamma^i - \beta^j \partial_j B^i,
+\]
+where $\Gamma^i$ are the Christoffel symbols, and $\eta$ is a damping parameter \cite{alcubierre2003gauge}.
+
+\subsubsection{Combined Gauge Choices}
+A commonly used combination in numerical simulations, especially for black hole spacetimes, is the 1+log slicing with the Gamma-driver shift condition. This combination is particularly effective for maintaining stability and avoiding coordinate pathologies in simulations involving black holes \cite{campanelli2006accurate,baker2006gravitational}.
+
+
 \paragraph{Gauge Fixing}
 \begin{itemize}
     \item To simplify the analysis, a gauge condition is applied:
@@ -198,53 +281,8 @@
     \item This gauge condition eliminates redundant degrees of freedom in the perturbation and ensures stability in numerical evolution.
 \end{itemize}
 
+
 \section{3+1 Equations with Perturbations in Harmonic Gauge}
-
-\subsection{Evolution Equations}
-\begin{itemize}
-    \item The 3+1 decomposition splits the Einstein field equations into evolution and constraint equations. With the perturbed metric:
-    \[
-    g_{\mu\nu} = g_{\mu\nu}^{(0)} + \epsilon h_{\mu\nu},
-    \]
-    the evolution equations for the spatial metric $\gamma_{ij}$ and extrinsic curvature $K_{ij}$ are:
-    \begin{align}
-        \partial_t \gamma_{ij} &= -2\alpha K_{ij} + \nabla_i \beta_j + \nabla_j \beta_i, \\
-        \partial_t K_{ij} &= -\nabla_i \nabla_j \alpha + \alpha (R_{ij} + K K_{ij} - 2K_{ik}K^k_j) + \beta^k \nabla_k K_{ij} + K_{ik} \nabla_j \beta^k + K_{jk} \nabla_i \beta^k.
-    \end{align}
-    Here, $\nabla_i$ is the covariant derivative associated with the spatial metric $\gamma_{ij}$, and $R_{ij}$ is its Ricci tensor.
-    \item Introducing perturbations:
-    \begin{align*}
-        \gamma_{ij} &= \gamma_{ij}^{(0)} + \epsilon h_{ij}, \\
-        K_{ij} &= K_{ij}^{(0)} + \epsilon \delta K_{ij},
-    \end{align*}
-    the evolution equations for the perturbed variables become:
-    \begin{align}
-        \partial_t h_{ij} &= -2 \alpha_0 \delta K_{ij} + \mathcal{L}_\beta h_{ij}, \\
-        \partial_t \delta K_{ij} &= -\nabla_i \nabla_j \delta\alpha + \alpha_0 \left( \delta R_{ij} + K^{(0)} \delta K_{ij} - 2 K_{ik}^{(0)} \delta K^k_j \right),
-    \end{align}
-    where $\mathcal{L}_\beta$ is the Lie derivative along the shift vector $\beta^i$.
-
-\end{itemize}
-
-\subsection{Constraint Equations}
-\begin{itemize}
-    \item The Hamiltonian constraint:
-    \[
-    R - K_{ij}K^{ij} + K^2 = 0.
-    \]
-    Expanding in terms of the perturbations, this becomes:
-    \[
-    \delta R - 2 K^{(0)} \delta K + \delta K_{ij} K^{ij} - K_{ij}^{(0)} \delta K^{ij} = 0.
-    \]
-    \item The momentum constraint:
-    \[
-    \nabla_j (K^{ij} - \gamma^{ij} K) = 0,
-    \]
-    leads to:
-    \[
-    \nabla_j (\delta K^{ij} - h^{ij} K^{(0)}) = 0.
-    \]
-\end{itemize}
 
 \subsection{Harmonic Gauge Condition}
 \begin{itemize}
@@ -412,20 +450,6 @@ print("Curvature Evolution:", evol_curvature)
     \end{align*}
 \end{itemize}
 
-\subsection{Evolution Equations}
-\begin{itemize}
-    \item The evolution equations for the perturbed metric and extrinsic curvature are:
-    \begin{align*}
-        \partial_t \gamma_{ij} &= -2\alpha_0 K_{ij} + \nabla_i \beta_j + \nabla_j \beta_i, \\
-        \partial_t K_{ij} &= -\nabla_i \nabla_j \alpha_0 + \alpha_0 \left( R_{ij} + K K_{ij} - 2K_{ik} K^k_j \right).
-    \end{align*}
-    \item The secondary black hole's influence is captured by the perturbation $h_{\mu\nu}$ and its evolution:
-    \[
-    \partial_t h_{\mu\nu} = f(\alpha_0, \beta^i, h_{\mu\nu}),
-    \]
-    where $f$ includes contributions from spherical harmonic modes.
-\end{itemize}
-
 \subsection{Numerical Implementation}
 \begin{itemize}
     \item **Discretization**:
@@ -461,29 +485,6 @@ print("Curvature Evolution:", evol_curvature)
 \begin{itemize}
     \item The numerical implementation uses a finite-difference approach to evolve the 3+1 decomposition equations for a binary black hole system with an extreme mass ratio.
     \item The grid is constructed in spherical coordinates $(r, \theta, \phi)$, with sufficient resolution to capture the dynamics of both the primary black hole and the perturbations induced by the secondary black hole.
-\end{itemize}
-
-\subsection{Initialization}
-\begin{itemize}
-    \item The initial data is based on the Painlevé-Gullstrand metric for the primary black hole:
-    \begin{itemize}
-        \item Lapse ($\alpha$), shift ($\beta^i$), and spatial metric components ($\gamma_{ij}$) are initialized to match the unperturbed Schwarzschild spacetime.
-    \end{itemize}
-    \item Perturbations representing the influence of the secondary black hole are introduced into the metric and extrinsic curvature:
-    \[
-    h_{\mu\nu} = \sum_{\ell, m} H_{\mu\nu}^{(\ell m)} Y_{\ell m}(\theta, \phi),
-    \]
-    where $H_{\mu\nu}^{(\ell m)}$ are the perturbation amplitudes.
-\end{itemize}
-
-\subsection{Evolution Equations}
-\begin{itemize}
-    \item The evolution equations for the metric components $\gamma_{ij}$ and extrinsic curvature $K_{ij}$ are discretized using finite differences:
-    \begin{align*}
-        \partial_t \gamma_{ij} &= -2\alpha K_{ij} + \nabla_i \beta_j + \nabla_j \beta_i, \\
-        \partial_t K_{ij} &= -\nabla_i \nabla_j \alpha + \alpha \left( R_{ij} + K K_{ij} - 2 K_{ik} K^k_j \right).
-    \end{align*}
-    \item The secondary black hole's influence is encoded through the perturbation terms in $h_{\mu\nu}$, which evolve consistently with the spherical harmonic decomposition.
 \end{itemize}
 
 \subsection{Constraints and Stability}
@@ -701,13 +702,6 @@ This implementation includes a complete timestep evolution loop with outgoing wa
     \end{itemize}
 \end{itemize}
 
-\paragraph{Results}
-\begin{itemize}
-    \item The outgoing wave boundary ensures smooth propagation of perturbations.
-    \item Inner boundary stabilization prevents unphysical artifacts near the black hole horizon.
-    \item The Hamiltonian constraint remains bounded throughout the evolution.
-\end{itemize}
-
 
 \subsection{Gauge Conditions}
 \begin{itemize}
@@ -764,6 +758,7 @@ Dynamic gauge conditions are essential for stabilizing numerical simulations by 
 \end{itemize}
 
 \paragraph{Results}
+\todo{turned everything off}
 \begin{itemize}
     \item Initial conditions:
     \begin{itemize}
@@ -1042,6 +1037,7 @@ The refined radial grid and perturbation array shape at the end of the evolution
 
 
 \subsection{Perturbation Treatment}
+\todo{Need to split into even and odd and add the tensorial harmonics}
 \begin{itemize}
     \item Expand the perturbation terms $h_{\mu\nu}$ in spherical tensorial harmonics:
     \[
@@ -1056,6 +1052,7 @@ The refined radial grid and perturbation array shape at the end of the evolution
 Perturbations are expanded using spherical harmonics $Y_{\ell m}(\theta, \phi)$ to represent disturbances on the computational domain. The degree $\ell$ and order $m$ control the angular complexity of the perturbation.
 
 \paragraph{Implementation Details}
+\todo{setting $\phi=0$ seems too much}
 \begin{itemize}
     \item The spherical harmonic function $Y_{\ell m}(\theta, \phi)$ is defined as:
     \[

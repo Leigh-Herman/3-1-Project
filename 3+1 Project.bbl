@@ -1,9 +1,66 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{alcubierre2008introduction}
+Miguel Alcubierre.
+\newblock Introduction to 3+1 numerical relativity.
+\newblock {\em Lecture Notes in Physics}, 73, 2008.
+
+\bibitem{alcubierre2000standard}
+Miguel Alcubierre, Bernd Br{\"u}gmann, Manuel Miller, William-Michael Suen, and
+  Mark Tobias.
+\newblock Toward a standard testbed for numerical relativity.
+\newblock {\em Classical and Quantum Gravity}, 17(10):215--252, 2000.
+
+\bibitem{alcubierre2003gauge}
+Miguel Alcubierre, Bernd Br{\"u}gmann, David Pollney, Edward Seidel, and
+  Raymond Takahashi.
+\newblock Gauge conditions for long-term numerical black hole evolutions
+  without excision.
+\newblock {\em Physical Review D}, 67(8):084027, 2003.
+
+\bibitem{baker2006gravitational}
+John~G. Baker, Joan Centrella, Deirdre-Irene Choi, Michael Koppitz, and James
+  van Meter.
+\newblock Gravitational wave extraction from an inspiraling configuration of
+  merging black holes.
+\newblock {\em Physical Review Letters}, 96(11):111102, 2006.
 
 \bibitem{baumgarte2010numerical}
 Thomas~W. Baumgarte and Stuart~L. Shapiro.
 \newblock {\em Numerical Relativity: Solving Einstein's Equations on the
   Computer}.
 \newblock Cambridge University Press, 2010.
+
+\bibitem{bona1994gauge}
+Carles Bona and Joan Mass{\'o}.
+\newblock A gauge condition for the numerical evolution of spacetime.
+\newblock {\em Physical Review D}, 40(12):798--801, 1994.
+
+\bibitem{campanelli2006accurate}
+Manuela Campanelli, Carlos~O. Lousto, and Yosef Zlochower.
+\newblock Accurate evolutions of orbiting black-hole binaries without excision.
+\newblock {\em Physical Review D}, 74(4):041501, 2006.
+
+\bibitem{gourgoulhon2012three}
+Eric Gourgoulhon.
+\newblock {\em 3+1 Formalism in General Relativity: Bases of Numerical
+  Relativity}, volume 846 of {\em Lecture Notes in Physics}.
+\newblock Springer, 2012.
+
+\bibitem{smarr1978kinematical}
+Larry Smarr and James~W. York.
+\newblock Kinematical conditions in the construction of spacetime.
+\newblock {\em Physical Review D}, 17(10):2529--2551, 1978.
+
+\bibitem{smarr1979structure}
+Larry Smarr and James~W. York.
+\newblock The structure of dynamical spacetimes.
+\newblock {\em Annals of the New York Academy of Sciences}, 302(1):569--576,
+  1979.
+
+\bibitem{wald1984general}
+Robert~M. Wald.
+\newblock {\em General Relativity}.
+\newblock University of Chicago Press, 1984.
 
 \end{thebibliography}
