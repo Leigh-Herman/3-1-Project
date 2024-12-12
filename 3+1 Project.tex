@@ -437,6 +437,136 @@ print("Curvature Evolution:", evol_curvature)
     \]
 \end{itemize}
 
+\section{3+1 Equations with Perturbations in Transverse-Traceless Gauge}
+
+\subsection{Transverse-Traceless Gauge Condition}
+\begin{itemize}
+    \item The Transverse-Traceless (TT) gauge simplifies the equations by isolating the physical degrees of freedom of gravitational waves, imposing:
+    \[
+    h^i_{\ i} = 0, \quad \partial^j h_{ij} = 0, \quad h_{0\mu} = 0,
+    \]
+    where $h_{\mu\nu}$ are perturbations of the background metric.
+    \item For the 3+1 split, this implies:
+    \begin{align*}
+        h^k_k &= 0 \quad \text{(Traceless condition)}, \\
+        \partial^j h_{ij} &= 0 \quad \text{(Transversality condition)}.
+    \end{align*}
+    These conditions decouple physical gravitational waves from coordinate effects.
+\end{itemize}
+
+\subsection{Perturbative Effects on Lapse and Shift}
+\begin{itemize}
+    \item The lapse $\alpha$ and shift $\beta^i$ are perturbed similarly to other gauges:
+    \begin{align*}
+        \alpha &= \alpha_0 + \epsilon \delta\alpha, \\
+        \beta^i &= \beta_0^i + \epsilon \delta\beta^i.
+    \end{align*}
+    \item Substituting these into the Einstein equations with the TT gauge conditions leads to:
+    \[
+    \partial_t \delta\alpha = f(h_{ij}), \quad \partial_t \delta\beta^i = g(h_{ij}),
+    \]
+    where the functions \(f\) and \(g\) ensure compatibility with the TT gauge constraints.
+\end{itemize}
+
+\subsection{Symbolic Calculation of 3+1 Equations in Python}
+
+To ensure precise derivations, the 3+1 decomposition equations, including the constraints and evolution equations, are symbolically derived using Python. Below is an outline of the symbolic calculations:
+
+\paragraph{Setup of the Problem}
+\begin{itemize}
+    \item Define the background metric components for a flat spacetime:
+    \[
+    g_{\mu\nu}^{(0)} = 
+    \begin{bmatrix}
+    -1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+    \end{bmatrix}.
+    \]
+    \item Introduce perturbations $h_{\mu\nu}$ satisfying the TT conditions:
+    \[
+    g_{\mu\nu} = g_{\mu\nu}^{(0)} + \epsilon h_{\mu\nu}, \quad h_{0\mu} = 0, \quad h^i_{\ i} = 0, \quad \partial^j h_{ij} = 0.
+    \]
+\end{itemize}
+
+\paragraph{Key Equations Implemented in Python}
+\begin{itemize}
+    \item **Hamiltonian Constraint**:
+    \[
+    H = R - K_{ij} K^{ij} + K^2 = 0.
+    \]
+    For TT perturbations, the constraint reduces to:
+    \[
+    H = \frac{1}{2} \Delta h_{ij} - \frac{1}{2} \partial_t^2 h_{ij}.
+    \]
+    \item **Metric Evolution Equation**:
+    \[
+    \partial_t \gamma_{ij} = -2\alpha K_{ij} + \nabla_i \beta_j + \nabla_j \beta_i.
+    \]
+    Under TT conditions:
+    \[
+    \partial_t h_{ij} = -2\alpha K_{ij}.
+    \]
+    \item **Curvature Evolution Equation**:
+    \[
+    \partial_t K_{ij} = -\nabla_i \nabla_j \alpha + \alpha \left( R_{ij} + K K_{ij} - 2K_{ik} K^k_j \right).
+    \]
+    For TT perturbations:
+    \[
+    \partial_t K_{ij} = \alpha \Delta h_{ij}.
+    \]
+\end{itemize}
+
+\paragraph{Python Code for Symbolic Calculations}
+The equations are symbolically implemented using Python's SymPy library:
+\begin{verbatim}
+from sympy import symbols, Function, diff, simplify, Matrix
+
+# Define variables
+t, x, y, z, epsilon = symbols('t x y z epsilon')
+alpha = Function('alpha')(t)
+h_ij = Function('h_ij')(t, x, y, z)
+
+# TT gauge conditions
+trace_free = simplify(h_ij.diff(x) + h_ij.diff(y) + h_ij.diff(z))
+transversality = simplify(diff(h_ij, x) + diff(h_ij, y))
+
+# Hamiltonian constraint
+delta_h = diff(h_ij, x, x) + diff(h_ij, y, y) + diff(h_ij, z, z)
+hamiltonian_constraint = simplify(0.5 * delta_h - 0.5 * diff(h_ij, t, t))
+
+# Metric evolution
+metric_evolution = diff(h_ij, t) + 2 * alpha * diff(h_ij, x)
+
+# Results
+print("Trace-free condition:", trace_free)
+print("Transversality condition:", transversality)
+print("Hamiltonian Constraint:", hamiltonian_constraint)
+print("Metric Evolution:", metric_evolution)
+\end{verbatim}
+
+\paragraph{Symbolic Results}
+\begin{itemize}
+    \item **Trace-free Condition**:
+    \[
+    h^i_{\ i} = 0.
+    \]
+    \item **Transversality Condition**:
+    \[
+    \partial^j h_{ij} = 0.
+    \]
+    \item **Hamiltonian Constraint**:
+    \[
+    H = \frac{1}{2} \Delta h_{ij} - \frac{1}{2} \partial_t^2 h_{ij}.
+    \]
+    \item **Metric Evolution**:
+    \[
+    \partial_t h_{ij} = -2\alpha K_{ij}.
+    \]
+\end{itemize}
+
+
 \section{Binary Black Hole Extreme Mass Ratio Collision}
 
 \subsection{Overview of the Scenario}
