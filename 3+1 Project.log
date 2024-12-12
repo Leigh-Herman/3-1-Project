@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.11.7)  12 DEC 2024 13:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.11.7)  12 DEC 2024 14:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -767,8 +767,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `"3+1 Project.toc"'.
 
- [2{C:/Users/herma/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-su
-per-ts1.enc}] [3] [4]
+ [2] [3{C:/Users/herma/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/c
+m-super-ts1.enc}] [4]
 Overfull \hbox (1.78943pt too wide) in paragraph at lines 165--165
 []\OT1/cmr/bx/n/14.4 Metric in Painlev^^Se-Gullstrand Co-or-di-nates with Per-t
 ur-ba-tions 
@@ -781,35 +781,35 @@ Overfull \hbox (0.79936pt too wide) in paragraph at lines 226--227
  []
 
 [7] [8]
-Overfull \hbox (13.02075pt too wide) in paragraph at lines 285--285
+Overfull \hbox (13.02075pt too wide) in paragraph at lines 314--314
 []\OT1/cmr/bx/n/17.28 3+1 Equa-tions with Per-tur-ba-tions in Har-monic Gauge 
  []
 
-[9] [10] [11] [12] [13] [14] [15] [16] [17] [18]
+[9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 761.
- [19] [20] [21] [22] [23]
-[24] [25] [26] [27] [28] [29]
-Overfull \hbox (5.42348pt too wide) in paragraph at lines 1296--1297
+ine 790.
+ [20] [21] [22] [23]
+[24] [25] [26] [27] [28] [29] [30]
+Overfull \hbox (5.42348pt too wide) in paragraph at lines 1325--1326
 []\OT1/cmr/m/n/12 The max-i-mum Hamil-to-nian con-straint $\OMS/cmsy/m/n/12 j\O
 ML/cmm/m/it/12 H\OMS/cmsy/m/n/12 j$ \OT1/cmr/m/n/12 is mon-i-tored in par-al-le
 l at each timestep. 
  []
 
-[30] [31] [32] [33] [34] [35] [36] [37] [38] (3+1 Project.bbl [39]) [40]
+[31] [32] [33] [34] [35] [36] [37] [38] [39] (3+1 Project.bbl [40]) [41]
 (3+1 Project.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
 Package rerunfilecheck Info: File `"3+1 Project".out' has not changed.
-(rerunfilecheck)             Checksum: 99978981FD73B2ED1C0D146C588F2797;14716.
+(rerunfilecheck)             Checksum: 1912D16502A70E61B43D306C07D11CE9;15617.
  ) 
 Here is how much of TeX's memory you used:
- 21647 strings out of 474592
- 402233 string characters out of 5745799
+ 21665 strings out of 474592
+ 402597 string characters out of 5745799
  1941533 words of memory out of 5000000
- 43185 multiletter control sequences out of 15000+600000
+ 43197 multiletter control sequences out of 15000+600000
  567685 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,16n,121p,493b,969s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -829,9 +829,9 @@ erma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
 /amsfonts/cm/cmtt12.pfb><C:/Users/herma/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/amsfonts/symbols/msam10.pfb><C:/Users/herma/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "3+1 Project.pdf" (40 pages, 358767 bytes).
+Output written on "3+1 Project.pdf" (41 pages, 365785 bytes).
 PDF statistics:
- 823 PDF objects out of 1000 (max. 8388607)
- 284 named destinations out of 1000 (max. 500000)
- 525 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 854 PDF objects out of 1000 (max. 8388607)
+ 290 named destinations out of 1000 (max. 500000)
+ 557 words of extra memory for PDF output out of 10000 (max. 10000000)
 

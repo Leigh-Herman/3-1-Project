@@ -2,7 +2,7 @@
 \usepackage{amsmath, amssymb, hyperref, geometry}
 \usepackage{todonotes}
 \geometry{margin=1in}
-\title{Numerical Relativity: A 3+1 Split Approach}
+\title{Numerical Relativity: A 3+1 Split and Numerical Analysis}
 \author{DLH}
 \date{\today}
 
@@ -237,7 +237,7 @@ Gauge conditions can be divided into two main categories: slicing conditions and
 \subsubsection{Geodesic Slicing}
 Geodesic slicing sets $\alpha = 1$ and $\beta^i = 0$, leading to straightforward coordinate systems. However, this choice often results in the formation of coordinate singularities, such as caustics \cite{smarr1978kinematical}.
 
-\subsection{Harmonic Slicing}
+\subsubsection{Harmonic Slicing}
 Harmonic slicing enforces the condition $\Box t = 0$, which helps to maintain a smooth evolution and avoids singularities. This condition is frequently used in conjunction with harmonic coordinates \cite{bona1994gauge}.
 
 \subsubsection{1+log Slicing}
@@ -280,6 +280,35 @@ A commonly used combination in numerical simulations, especially for black hole 
     \end{itemize}
     \item This gauge condition eliminates redundant degrees of freedom in the perturbation and ensures stability in numerical evolution.
 \end{itemize}
+
+
+\subsection{The Transverse-Traceless (TT) Gauge}
+The Transverse-Traceless (TT) gauge is a specialized gauge choice used in gravitational wave studies. It simplifies the Einstein equations by isolating the physical degrees of freedom of gravitational waves while eliminating non-physical gauge artifacts. In this gauge, the metric perturbations $h_{\mu\nu}$ satisfy:
+\[
+h_{0\mu} = 0, \quad h^i_{\ i} = 0, \quad \partial^i h_{ij} = 0,
+\]
+where $h_{\mu\nu}$ represents small perturbations on a background metric.
+
+\subsubsection{Slicing in the TT Gauge}
+The TT gauge assumes a background spacetime that is maximally sliced or asymptotically flat. Maximal slicing ensures that the trace of the extrinsic curvature, $K$, vanishes:
+\[
+K = 0.
+\]
+This condition suppresses the growth of gauge artifacts and ensures stability over long simulation times \cite{baumgarte2010numerical}.
+
+\subsubsection{Spatial Gauge in the TT Gauge}
+In the TT gauge, the spatial components of the metric are constrained to be transverse and traceless:
+\[
+h^i_{\ i} = 0 \quad \text{and} \quad \partial^j h_{ij} = 0.
+\]
+These constraints are enforced through projection operators that extract the physical degrees of freedom. The shift vector $\beta^i$ is chosen to eliminate non-physical components of the perturbation, typically through:
+\[
+\partial_t \beta^i = \eta \partial_t \Gamma^i,
+\]
+where $\eta$ is a damping parameter that helps suppress gauge-related distortions \cite{alcubierre2003gauge}.
+
+\subsubsection{Applications of the TT Gauge}
+The TT gauge is widely used in numerical simulations of gravitational waves, particularly for extracting waveforms from binary mergers and studying the properties of radiative spacetime. This gauge effectively decouples the physical gravitational wave modes from coordinate effects \cite{baker2006gravitational,campanelli2006accurate}.
 
 
 \section{3+1 Equations with Perturbations in Harmonic Gauge}
@@ -1631,8 +1660,8 @@ The animated GIF produced by the simulation visualizes the evolution of the Hami
 The GIF provides critical insights into the simulation's stability and accuracy by visualizing the Hamiltonian constraint. By analyzing the evolution of \( H \), it is possible to identify and address numerical instabilities while interpreting the physical dynamics of the black hole interaction.
 
 \subsection{Plunging Black Hole Simulation}
-
 \paragraph{Overview}
+\todo{Ugh}
 This simulation models the interaction of a smaller black hole plunging into a larger black hole. The focus is on the evolution of the Hamiltonian constraint and its behavior as the smaller black hole approaches and ultimately merges with the larger black hole.
 
 \paragraph{Methodology}

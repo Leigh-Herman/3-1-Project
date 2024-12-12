@@ -1,4 +1,4 @@
-\contentsline {section}{\numberline {1}Introduction (Draft Outline)}{2}{section.1}%
+\contentsline {section}{\numberline {1}Introduction (Draft Outline)}{3}{section.1}%
 \contentsline {section}{\numberline {2}Project Outline}{3}{section.2}%
 \contentsline {section}{\numberline {3}Defining the Problem Framework}{4}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Einstein's Field Equations}{4}{subsection.3.1}%
@@ -14,159 +14,163 @@
 \contentsline {subsection}{\numberline {4.1}How is a Gauge Choice Implemented?}{7}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Different Gauge Options}{7}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Geodesic Slicing}{7}{subsubsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.3}Harmonic Slicing}{8}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}1+log Slicing}{8}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Maximal Slicing}{8}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Minimal Distortion Shift}{8}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Gamma-Driver Shift Condition}{8}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Combined Gauge Choices}{8}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.2.2}Harmonic Slicing}{8}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}1+log Slicing}{8}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Maximal Slicing}{8}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Minimal Distortion Shift}{8}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Gamma-Driver Shift Condition}{8}{subsubsection.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.7}Combined Gauge Choices}{8}{subsubsection.4.2.7}%
 \contentsline {paragraph}{Gauge Fixing}{9}{section*.5}%
-\contentsline {section}{\numberline {5}3+1 Equations with Perturbations in Harmonic Gauge}{9}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Harmonic Gauge Condition}{9}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Perturbative Effects on Lapse and Shift}{9}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Symbolic Calculation of 3+1 Equations in Python}{9}{subsection.5.3}%
-\contentsline {paragraph}{Setup of the Problem}{10}{section*.6}%
-\contentsline {paragraph}{Equations Implemented in Python}{10}{section*.7}%
-\contentsline {paragraph}{Python Code for Symbolic Calculations}{10}{section*.8}%
-\contentsline {paragraph}{Symbolic Results}{11}{section*.9}%
-\contentsline {section}{\numberline {6}Binary Black Hole Extreme Mass Ratio Collision}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Overview of the Scenario}{11}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Initial Data Construction}{12}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Numerical Implementation}{12}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Expected Results and Testing}{13}{subsection.6.4}%
-\contentsline {section}{\numberline {7}Numerical Implementation of the 3+1 Equations}{13}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Framework Overview}{13}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Constraints and Stability}{13}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Time Evolution}{13}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Expected Results}{14}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Enhanced Numerical Developments}{14}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Higher-Order Numerical Methods}{14}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}Higher-Order Numerical Methods: Runge-Kutta 4th Order}{14}{subsubsection.8.1.1}%
-\contentsline {paragraph}{Overview}{14}{section*.10}%
-\contentsline {paragraph}{Implementation Details}{15}{section*.11}%
-\contentsline {paragraph}{Code Description}{15}{section*.12}%
-\contentsline {paragraph}{Results}{15}{section*.13}%
-\contentsline {paragraph}{Sample Output}{15}{section*.14}%
-\contentsline {subsection}{\numberline {8.2}Boundary Conditions}{16}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Boundary Conditions}{16}{subsubsection.8.2.1}%
-\contentsline {paragraph}{Overview}{16}{section*.15}%
-\contentsline {paragraph}{Outgoing Wave Boundary Condition}{16}{section*.16}%
-\contentsline {paragraph}{Inner Boundary Condition}{16}{section*.17}%
-\contentsline {paragraph}{Code Description}{17}{section*.18}%
-\contentsline {paragraph}{Results}{17}{section*.19}%
-\contentsline {paragraph}{Sample Output}{17}{section*.20}%
-\contentsline {subsubsection}{\numberline {8.2.2}Full Evolution Loop with Boundary Conditions}{17}{subsubsection.8.2.2}%
-\contentsline {paragraph}{Overview}{17}{section*.21}%
-\contentsline {paragraph}{Implementation Details}{17}{section*.22}%
-\contentsline {subsection}{\numberline {8.3}Gauge Conditions}{18}{subsection.8.3}%
-\contentsline {subsubsection}{\numberline {8.3.1}Gauge Conditions}{18}{subsubsection.8.3.1}%
-\contentsline {paragraph}{Overview}{18}{section*.23}%
-\contentsline {paragraph}{Implementation Details}{19}{section*.24}%
-\contentsline {paragraph}{Code Description}{19}{section*.25}%
-\contentsline {paragraph}{Results}{19}{section*.26}%
-\contentsline {paragraph}{Sample Output}{19}{section*.28}%
-\contentsline {subsubsection}{\numberline {8.3.2}Gauge Conditions Integrated with Evolution Loop}{19}{subsubsection.8.3.2}%
-\contentsline {paragraph}{Overview}{19}{section*.29}%
-\contentsline {paragraph}{Implementation Details}{20}{section*.30}%
-\contentsline {paragraph}{Code Integration}{20}{section*.31}%
-\contentsline {paragraph}{Results}{20}{section*.32}%
-\contentsline {paragraph}{Sample Output}{20}{section*.33}%
-\contentsline {subsection}{\numberline {8.4}Adaptive Mesh Refinement (AMR)}{20}{subsection.8.4}%
-\contentsline {subsubsection}{\numberline {8.4.1}Adaptive Mesh Refinement (AMR)}{20}{subsubsection.8.4.1}%
-\contentsline {paragraph}{Overview}{20}{section*.34}%
-\contentsline {paragraph}{Implementation Details}{21}{section*.35}%
-\contentsline {paragraph}{Code Description}{21}{section*.36}%
-\contentsline {paragraph}{Results}{21}{section*.37}%
-\contentsline {paragraph}{Sample Output}{22}{section*.38}%
-\contentsline {subsubsection}{\numberline {8.4.2}Adaptive Mesh Refinement Integrated with Evolution Loop}{22}{subsubsection.8.4.2}%
-\contentsline {paragraph}{Overview}{22}{section*.39}%
-\contentsline {paragraph}{Implementation Details}{22}{section*.40}%
-\contentsline {paragraph}{Code Integration}{22}{section*.41}%
-\contentsline {paragraph}{Results}{23}{section*.42}%
-\contentsline {paragraph}{Sample Output}{23}{section*.43}%
-\contentsline {subsubsection}{\numberline {8.4.3}Full Evolution Loop with Adaptive Mesh Refinement (AMR)}{23}{subsubsection.8.4.3}%
-\contentsline {paragraph}{Overview}{23}{section*.44}%
-\contentsline {paragraph}{Implementation Details}{23}{section*.45}%
-\contentsline {paragraph}{Evolution Loop}{24}{section*.46}%
-\contentsline {paragraph}{Results}{24}{section*.47}%
-\contentsline {paragraph}{Sample Output}{24}{section*.48}%
-\contentsline {subsection}{\numberline {8.5}Perturbation Treatment}{24}{subsection.8.5}%
-\contentsline {subsubsection}{\numberline {8.5.1}Perturbation Treatment Using Spherical Harmonics}{25}{subsubsection.8.5.1}%
-\contentsline {paragraph}{Overview}{25}{section*.50}%
-\contentsline {paragraph}{Implementation Details}{25}{section*.51}%
-\contentsline {paragraph}{Code Description}{25}{section*.53}%
-\contentsline {paragraph}{Results}{25}{section*.54}%
-\contentsline {subsubsection}{\numberline {8.5.2}Integration of Spherical Harmonics into the Evolution Loop}{26}{subsubsection.8.5.2}%
-\contentsline {paragraph}{Overview}{26}{section*.55}%
-\contentsline {paragraph}{Implementation Details}{26}{section*.56}%
-\contentsline {paragraph}{Results}{26}{section*.57}%
-\contentsline {paragraph}{Sample Output}{26}{section*.58}%
-\contentsline {subsection}{\numberline {8.6}Stability Analysis}{26}{subsection.8.6}%
-\contentsline {subsubsection}{\numberline {8.6.1}Stability Analysis}{27}{subsubsection.8.6.1}%
-\contentsline {paragraph}{Overview}{27}{section*.59}%
-\contentsline {paragraph}{Implementation Details}{27}{section*.60}%
-\contentsline {paragraph}{Code Description}{27}{section*.61}%
-\contentsline {paragraph}{Results}{27}{section*.62}%
-\contentsline {paragraph}{Conclusion}{27}{section*.63}%
-\contentsline {subsubsection}{\numberline {8.6.2}Evolution Loop with Stability Analysis}{28}{subsubsection.8.6.2}%
-\contentsline {paragraph}{Overview}{28}{section*.64}%
-\contentsline {paragraph}{Implementation Details}{28}{section*.65}%
-\contentsline {paragraph}{Code Description}{28}{section*.66}%
-\contentsline {paragraph}{Results}{28}{section*.67}%
-\contentsline {paragraph}{Conclusion}{28}{section*.68}%
-\contentsline {subsection}{\numberline {8.7}Parallelization}{29}{subsection.8.7}%
-\contentsline {subsubsection}{\numberline {8.7.1}Parallel Implementation of Stability Analysis}{29}{subsubsection.8.7.1}%
-\contentsline {paragraph}{Overview}{29}{section*.69}%
-\contentsline {paragraph}{Implementation Details}{29}{section*.70}%
-\contentsline {paragraph}{Code Description}{29}{section*.71}%
-\contentsline {paragraph}{Results}{29}{section*.72}%
-\contentsline {paragraph}{Conclusion}{29}{section*.73}%
-\contentsline {subsubsection}{\numberline {8.7.2}Evolution Loop with Parallel Stability Analysis}{30}{subsubsection.8.7.2}%
-\contentsline {paragraph}{Overview}{30}{section*.74}%
-\contentsline {paragraph}{Implementation Details}{30}{section*.75}%
-\contentsline {paragraph}{Results}{30}{section*.76}%
-\contentsline {paragraph}{Conclusion}{30}{section*.77}%
-\contentsline {subsection}{\numberline {8.8}Advanced Visualization}{31}{subsection.8.8}%
-\contentsline {subsubsection}{\numberline {8.8.1}Advanced Visualizations of Hamiltonian Constraint Evolution}{31}{subsubsection.8.8.1}%
-\contentsline {paragraph}{Overview}{31}{section*.78}%
-\contentsline {paragraph}{Implementation Details}{31}{section*.79}%
-\contentsline {paragraph}{Code Description}{31}{section*.80}%
-\contentsline {paragraph}{Results}{31}{section*.81}%
-\contentsline {paragraph}{Conclusion}{31}{section*.82}%
-\contentsline {subsubsection}{\numberline {8.8.2}Integration of Advanced Visualizations into the Evolution Loop}{32}{subsubsection.8.8.2}%
-\contentsline {paragraph}{Overview}{32}{section*.83}%
-\contentsline {paragraph}{Implementation Details}{32}{section*.84}%
-\contentsline {paragraph}{Code Description}{32}{section*.85}%
-\contentsline {paragraph}{Results}{32}{section*.86}%
-\contentsline {paragraph}{Conclusion}{32}{section*.87}%
-\contentsline {subsection}{\numberline {8.9}Testing and Validation}{33}{subsection.8.9}%
-\contentsline {subsubsection}{\numberline {8.9.1}Testing and Validation of the Model}{33}{subsubsection.8.9.1}%
-\contentsline {paragraph}{Overview}{33}{section*.88}%
-\contentsline {paragraph}{Implementation Details}{33}{section*.89}%
-\contentsline {paragraph}{Code Description}{33}{section*.90}%
-\contentsline {paragraph}{Results}{34}{section*.91}%
-\contentsline {paragraph}{Conclusion}{34}{section*.92}%
-\contentsline {subsection}{\numberline {8.10}Unified Implementation of the Full Simulation}{34}{subsection.8.10}%
-\contentsline {paragraph}{Overview}{34}{section*.93}%
-\contentsline {paragraph}{Features Integrated}{34}{section*.94}%
-\contentsline {paragraph}{Implementation Workflow}{35}{section*.95}%
-\contentsline {paragraph}{Results}{35}{section*.96}%
-\contentsline {paragraph}{Conclusion}{35}{section*.97}%
-\contentsline {section}{\numberline {9}Simulation of Black Hole Interaction}{35}{section.9}%
-\contentsline {paragraph}{Overview}{35}{section*.98}%
-\contentsline {paragraph}{Objectives}{36}{section*.99}%
-\contentsline {paragraph}{Methodology}{36}{section*.100}%
-\contentsline {paragraph}{Expected Outcomes}{37}{section*.101}%
-\contentsline {subsection}{\numberline {9.1}Interpretation of the Hamiltonian Constraint Visualization}{37}{subsection.9.1}%
-\contentsline {paragraph}{Overview}{37}{section*.102}%
-\contentsline {paragraph}{Hamiltonian Constraint}{37}{section*.103}%
-\contentsline {paragraph}{Visualization Details}{37}{section*.104}%
-\contentsline {paragraph}{Physical Interpretation}{38}{section*.105}%
-\contentsline {paragraph}{Expected Trends}{38}{section*.106}%
-\contentsline {paragraph}{Suggestions for Analysis}{38}{section*.107}%
-\contentsline {paragraph}{Conclusion}{38}{section*.108}%
-\contentsline {subsection}{\numberline {9.2}Plunging Black Hole Simulation}{39}{subsection.9.2}%
-\contentsline {paragraph}{Overview}{39}{section*.109}%
-\contentsline {paragraph}{Methodology}{39}{section*.110}%
-\contentsline {paragraph}{Visualization}{39}{section*.111}%
-\contentsline {paragraph}{Conclusion}{39}{section*.112}%
+\contentsline {subsection}{\numberline {4.3}The Transverse-Traceless (TT) Gauge}{9}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Slicing in the TT Gauge}{9}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Spatial Gauge in the TT Gauge}{9}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Applications of the TT Gauge}{10}{subsubsection.4.3.3}%
+\contentsline {section}{\numberline {5}3+1 Equations with Perturbations in Harmonic Gauge}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Harmonic Gauge Condition}{10}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Perturbative Effects on Lapse and Shift}{10}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Symbolic Calculation of 3+1 Equations in Python}{10}{subsection.5.3}%
+\contentsline {paragraph}{Setup of the Problem}{11}{section*.6}%
+\contentsline {paragraph}{Equations Implemented in Python}{11}{section*.7}%
+\contentsline {paragraph}{Python Code for Symbolic Calculations}{11}{section*.8}%
+\contentsline {paragraph}{Symbolic Results}{12}{section*.9}%
+\contentsline {section}{\numberline {6}Binary Black Hole Extreme Mass Ratio Collision}{12}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Overview of the Scenario}{12}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Initial Data Construction}{13}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Numerical Implementation}{13}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Expected Results and Testing}{14}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Numerical Implementation of the 3+1 Equations}{14}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Framework Overview}{14}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Constraints and Stability}{14}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Time Evolution}{14}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Expected Results}{15}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Enhanced Numerical Developments}{15}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Higher-Order Numerical Methods}{15}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}Higher-Order Numerical Methods: Runge-Kutta 4th Order}{15}{subsubsection.8.1.1}%
+\contentsline {paragraph}{Overview}{15}{section*.10}%
+\contentsline {paragraph}{Implementation Details}{16}{section*.11}%
+\contentsline {paragraph}{Code Description}{16}{section*.12}%
+\contentsline {paragraph}{Results}{16}{section*.13}%
+\contentsline {paragraph}{Sample Output}{16}{section*.14}%
+\contentsline {subsection}{\numberline {8.2}Boundary Conditions}{17}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Boundary Conditions}{17}{subsubsection.8.2.1}%
+\contentsline {paragraph}{Overview}{17}{section*.15}%
+\contentsline {paragraph}{Outgoing Wave Boundary Condition}{17}{section*.16}%
+\contentsline {paragraph}{Inner Boundary Condition}{17}{section*.17}%
+\contentsline {paragraph}{Code Description}{18}{section*.18}%
+\contentsline {paragraph}{Results}{18}{section*.19}%
+\contentsline {paragraph}{Sample Output}{18}{section*.20}%
+\contentsline {subsubsection}{\numberline {8.2.2}Full Evolution Loop with Boundary Conditions}{18}{subsubsection.8.2.2}%
+\contentsline {paragraph}{Overview}{18}{section*.21}%
+\contentsline {paragraph}{Implementation Details}{18}{section*.22}%
+\contentsline {subsection}{\numberline {8.3}Gauge Conditions}{19}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Gauge Conditions}{19}{subsubsection.8.3.1}%
+\contentsline {paragraph}{Overview}{19}{section*.23}%
+\contentsline {paragraph}{Implementation Details}{20}{section*.24}%
+\contentsline {paragraph}{Code Description}{20}{section*.25}%
+\contentsline {paragraph}{Results}{20}{section*.26}%
+\contentsline {paragraph}{Sample Output}{20}{section*.28}%
+\contentsline {subsubsection}{\numberline {8.3.2}Gauge Conditions Integrated with Evolution Loop}{20}{subsubsection.8.3.2}%
+\contentsline {paragraph}{Overview}{20}{section*.29}%
+\contentsline {paragraph}{Implementation Details}{21}{section*.30}%
+\contentsline {paragraph}{Code Integration}{21}{section*.31}%
+\contentsline {paragraph}{Results}{21}{section*.32}%
+\contentsline {paragraph}{Sample Output}{21}{section*.33}%
+\contentsline {subsection}{\numberline {8.4}Adaptive Mesh Refinement (AMR)}{21}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}Adaptive Mesh Refinement (AMR)}{21}{subsubsection.8.4.1}%
+\contentsline {paragraph}{Overview}{21}{section*.34}%
+\contentsline {paragraph}{Implementation Details}{22}{section*.35}%
+\contentsline {paragraph}{Code Description}{22}{section*.36}%
+\contentsline {paragraph}{Results}{22}{section*.37}%
+\contentsline {paragraph}{Sample Output}{23}{section*.38}%
+\contentsline {subsubsection}{\numberline {8.4.2}Adaptive Mesh Refinement Integrated with Evolution Loop}{23}{subsubsection.8.4.2}%
+\contentsline {paragraph}{Overview}{23}{section*.39}%
+\contentsline {paragraph}{Implementation Details}{23}{section*.40}%
+\contentsline {paragraph}{Code Integration}{23}{section*.41}%
+\contentsline {paragraph}{Results}{24}{section*.42}%
+\contentsline {paragraph}{Sample Output}{24}{section*.43}%
+\contentsline {subsubsection}{\numberline {8.4.3}Full Evolution Loop with Adaptive Mesh Refinement (AMR)}{24}{subsubsection.8.4.3}%
+\contentsline {paragraph}{Overview}{24}{section*.44}%
+\contentsline {paragraph}{Implementation Details}{24}{section*.45}%
+\contentsline {paragraph}{Evolution Loop}{25}{section*.46}%
+\contentsline {paragraph}{Results}{25}{section*.47}%
+\contentsline {paragraph}{Sample Output}{25}{section*.48}%
+\contentsline {subsection}{\numberline {8.5}Perturbation Treatment}{25}{subsection.8.5}%
+\contentsline {subsubsection}{\numberline {8.5.1}Perturbation Treatment Using Spherical Harmonics}{26}{subsubsection.8.5.1}%
+\contentsline {paragraph}{Overview}{26}{section*.50}%
+\contentsline {paragraph}{Implementation Details}{26}{section*.51}%
+\contentsline {paragraph}{Code Description}{26}{section*.53}%
+\contentsline {paragraph}{Results}{26}{section*.54}%
+\contentsline {subsubsection}{\numberline {8.5.2}Integration of Spherical Harmonics into the Evolution Loop}{27}{subsubsection.8.5.2}%
+\contentsline {paragraph}{Overview}{27}{section*.55}%
+\contentsline {paragraph}{Implementation Details}{27}{section*.56}%
+\contentsline {paragraph}{Results}{27}{section*.57}%
+\contentsline {paragraph}{Sample Output}{27}{section*.58}%
+\contentsline {subsection}{\numberline {8.6}Stability Analysis}{27}{subsection.8.6}%
+\contentsline {subsubsection}{\numberline {8.6.1}Stability Analysis}{28}{subsubsection.8.6.1}%
+\contentsline {paragraph}{Overview}{28}{section*.59}%
+\contentsline {paragraph}{Implementation Details}{28}{section*.60}%
+\contentsline {paragraph}{Code Description}{28}{section*.61}%
+\contentsline {paragraph}{Results}{28}{section*.62}%
+\contentsline {paragraph}{Conclusion}{28}{section*.63}%
+\contentsline {subsubsection}{\numberline {8.6.2}Evolution Loop with Stability Analysis}{29}{subsubsection.8.6.2}%
+\contentsline {paragraph}{Overview}{29}{section*.64}%
+\contentsline {paragraph}{Implementation Details}{29}{section*.65}%
+\contentsline {paragraph}{Code Description}{29}{section*.66}%
+\contentsline {paragraph}{Results}{29}{section*.67}%
+\contentsline {paragraph}{Conclusion}{29}{section*.68}%
+\contentsline {subsection}{\numberline {8.7}Parallelization}{30}{subsection.8.7}%
+\contentsline {subsubsection}{\numberline {8.7.1}Parallel Implementation of Stability Analysis}{30}{subsubsection.8.7.1}%
+\contentsline {paragraph}{Overview}{30}{section*.69}%
+\contentsline {paragraph}{Implementation Details}{30}{section*.70}%
+\contentsline {paragraph}{Code Description}{30}{section*.71}%
+\contentsline {paragraph}{Results}{30}{section*.72}%
+\contentsline {paragraph}{Conclusion}{30}{section*.73}%
+\contentsline {subsubsection}{\numberline {8.7.2}Evolution Loop with Parallel Stability Analysis}{31}{subsubsection.8.7.2}%
+\contentsline {paragraph}{Overview}{31}{section*.74}%
+\contentsline {paragraph}{Implementation Details}{31}{section*.75}%
+\contentsline {paragraph}{Results}{31}{section*.76}%
+\contentsline {paragraph}{Conclusion}{31}{section*.77}%
+\contentsline {subsection}{\numberline {8.8}Advanced Visualization}{32}{subsection.8.8}%
+\contentsline {subsubsection}{\numberline {8.8.1}Advanced Visualizations of Hamiltonian Constraint Evolution}{32}{subsubsection.8.8.1}%
+\contentsline {paragraph}{Overview}{32}{section*.78}%
+\contentsline {paragraph}{Implementation Details}{32}{section*.79}%
+\contentsline {paragraph}{Code Description}{32}{section*.80}%
+\contentsline {paragraph}{Results}{32}{section*.81}%
+\contentsline {paragraph}{Conclusion}{32}{section*.82}%
+\contentsline {subsubsection}{\numberline {8.8.2}Integration of Advanced Visualizations into the Evolution Loop}{33}{subsubsection.8.8.2}%
+\contentsline {paragraph}{Overview}{33}{section*.83}%
+\contentsline {paragraph}{Implementation Details}{33}{section*.84}%
+\contentsline {paragraph}{Code Description}{33}{section*.85}%
+\contentsline {paragraph}{Results}{33}{section*.86}%
+\contentsline {paragraph}{Conclusion}{33}{section*.87}%
+\contentsline {subsection}{\numberline {8.9}Testing and Validation}{34}{subsection.8.9}%
+\contentsline {subsubsection}{\numberline {8.9.1}Testing and Validation of the Model}{34}{subsubsection.8.9.1}%
+\contentsline {paragraph}{Overview}{34}{section*.88}%
+\contentsline {paragraph}{Implementation Details}{34}{section*.89}%
+\contentsline {paragraph}{Code Description}{34}{section*.90}%
+\contentsline {paragraph}{Results}{35}{section*.91}%
+\contentsline {paragraph}{Conclusion}{35}{section*.92}%
+\contentsline {subsection}{\numberline {8.10}Unified Implementation of the Full Simulation}{35}{subsection.8.10}%
+\contentsline {paragraph}{Overview}{35}{section*.93}%
+\contentsline {paragraph}{Features Integrated}{35}{section*.94}%
+\contentsline {paragraph}{Implementation Workflow}{36}{section*.95}%
+\contentsline {paragraph}{Results}{36}{section*.96}%
+\contentsline {paragraph}{Conclusion}{36}{section*.97}%
+\contentsline {section}{\numberline {9}Simulation of Black Hole Interaction}{36}{section.9}%
+\contentsline {paragraph}{Overview}{36}{section*.98}%
+\contentsline {paragraph}{Objectives}{37}{section*.99}%
+\contentsline {paragraph}{Methodology}{37}{section*.100}%
+\contentsline {paragraph}{Expected Outcomes}{38}{section*.101}%
+\contentsline {subsection}{\numberline {9.1}Interpretation of the Hamiltonian Constraint Visualization}{38}{subsection.9.1}%
+\contentsline {paragraph}{Overview}{38}{section*.102}%
+\contentsline {paragraph}{Hamiltonian Constraint}{38}{section*.103}%
+\contentsline {paragraph}{Visualization Details}{38}{section*.104}%
+\contentsline {paragraph}{Physical Interpretation}{39}{section*.105}%
+\contentsline {paragraph}{Expected Trends}{39}{section*.106}%
+\contentsline {paragraph}{Suggestions for Analysis}{39}{section*.107}%
+\contentsline {paragraph}{Conclusion}{39}{section*.108}%
+\contentsline {subsection}{\numberline {9.2}Plunging Black Hole Simulation}{40}{subsection.9.2}%
+\contentsline {paragraph}{Overview}{40}{section*.109}%
+\contentsline {paragraph}{Methodology}{40}{section*.111}%
+\contentsline {paragraph}{Visualization}{40}{section*.112}%
+\contentsline {paragraph}{Conclusion}{40}{section*.113}%
